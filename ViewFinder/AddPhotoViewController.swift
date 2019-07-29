@@ -22,10 +22,27 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func Submit(_ sender: Any) {
-        
-        
+
+       
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    
+    if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+           
+            let photoToSave = Photos(entity: Photos.entity(), insertInto: context)
+            photoToSave.caption = textField.text
+            
+            if let userImage = imageView.image {
+                
+                if let userImageData = userImage.pngData () {
+                    photoToSave.photo = userImageData
+                }
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            navigationController?.popViewController(animated: true)
+        }
     }
+        
+
     
     @IBAction func takePhoto(_ sender: Any) {
         pickImage.sourceType = .camera
