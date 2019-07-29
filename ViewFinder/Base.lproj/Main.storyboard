@@ -48,7 +48,7 @@
         <!--Add new photo-->
         <scene sceneID="Gs5-bg-Bdh">
             <objects>
-                <viewController id="spo-RF-utM" sceneMemberID="viewController">
+                <viewController id="spo-RF-utM" customClass="AddPhotoViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x6b-YA-1eX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,6 +57,9 @@
                                 <rect key="frame" x="87" y="502" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="spo-RF-utM" eventType="touchUpInside" id="WWM-Zq-b0B"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxK-wQ-mId">
                                 <rect key="frame" x="87" y="210" width="240" height="128"/>
@@ -73,17 +76,27 @@
                                 <rect key="frame" x="190" y="433" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="Submit:" destination="spo-RF-utM" eventType="touchUpInside" id="cBO-rz-txJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbY-2w-TEs">
                                 <rect key="frame" x="224" y="502" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose from library"/>
+                                <connections>
+                                    <action selector="fromLibrary:" destination="spo-RF-utM" eventType="touchUpInside" id="UBX-fT-lp4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WEB-TM-zTF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add new photo" id="V5a-Se-yYH"/>
+                    <connections>
+                        <outlet property="imageView" destination="jxK-wQ-mId" id="Zwc-J1-eFu"/>
+                        <outlet property="textField" destination="DLG-NT-gJW" id="hO5-JM-XTd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrj-gt-Qw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
