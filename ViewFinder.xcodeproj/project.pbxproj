@@ -16,6 +16,7 @@
 		18D2648922EF493B00DA27C1 /* ViewFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2648822EF493B00DA27C1 /* ViewFinderUITests.swift */; };
 		18D2649722EF4DF800DA27C1 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2649622EF4DF800DA27C1 /* AddPhotoViewController.swift */; };
 		18D2649922EF661B00DA27C1 /* PhotoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2649822EF661B00DA27C1 /* PhotoTableTableViewController.swift */; };
+		18D2649B22EF7BED00DA27C1 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2649A22EF7BED00DA27C1 /* PhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		18D2648A22EF493B00DA27C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D2649622EF4DF800DA27C1 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		18D2649822EF661B00DA27C1 /* PhotoTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableTableViewController.swift; sourceTree = "<group>"; };
+		18D2649A22EF7BED00DA27C1 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				18D2646522EF493A00DA27C1 /* AppDelegate.swift */,
 				18D2646922EF493A00DA27C1 /* Main.storyboard */,
+				18D2649A22EF7BED00DA27C1 /* PhotoDetailViewController.swift */,
 				18D2649622EF4DF800DA27C1 /* AddPhotoViewController.swift */,
 				18D2649822EF661B00DA27C1 /* PhotoTableTableViewController.swift */,
 				18D2646F22EF493B00DA27C1 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				18D2646E22EF493A00DA27C1 /* ViewFinder.xcdatamodeld in Sources */,
 				18D2649722EF4DF800DA27C1 /* AddPhotoViewController.swift in Sources */,
 				18D2646622EF493A00DA27C1 /* AppDelegate.swift in Sources */,
+				18D2649B22EF7BED00DA27C1 /* PhotoDetailViewController.swift in Sources */,
 				18D2649922EF661B00DA27C1 /* PhotoTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

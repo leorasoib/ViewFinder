@@ -34,6 +34,11 @@ class PhotoTableTableViewController: UITableViewController {
                 }
             }
         }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailSegue", sender: photos[indexPath.row])
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         getPhotos()
     }
@@ -58,6 +63,16 @@ class PhotoTableTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            if let photoDetailView = segue.destination as? PhotoDetailViewController {
+                if let photoToSend = sender as? Photos {
+                    photoDetailView.photo = photoToSend
+                }
+            }
+        }
+    }
+
 
 
     /*
