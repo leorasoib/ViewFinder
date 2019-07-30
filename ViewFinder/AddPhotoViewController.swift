@@ -19,7 +19,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         pickImage.delegate = self
-        // Do any additional setup after loading the view.
+     
     }
     
 
